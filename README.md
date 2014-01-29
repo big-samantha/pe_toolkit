@@ -1,20 +1,20 @@
-pe_toolkit
+# pe_toolkit module.
 
-This is the pe_toolkit module.
+Plans include:
 
-License
--------
+  * Custom fact to determine free space available to PostgreSQL.
+
+
+### License
 
 Apache 2.0
 
 
-Contact
--------
+### Contact
 
 zachary @ puppetlabs DOT com
 
 
-Support
--------
+### Support
 
 Please log tickets and issues on the [GitHub tracker](https://github.com/zacharyalexstern/pe_toolkit/issues) for this project.
