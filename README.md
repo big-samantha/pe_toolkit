@@ -3,6 +3,7 @@
 Plans include:
 
   * Custom fact to determine free space available to PostgreSQL.
+    * Currently RHEL only.
 
 
 ### License
