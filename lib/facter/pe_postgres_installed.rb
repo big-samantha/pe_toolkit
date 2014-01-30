@@ -4,8 +4,8 @@
 Facter.add("pe_postgres_installed") do
   confine :kernel => "Linux"
   setcode do
-    rpmoutput = Facter::Util::Resolution.exec('rpm -qa pe-postgresql-server')
-    if rpmoutput.to_s.empty? == true
+    rpmempty = Facter::Util::Resolution.exec('rpm -qa pe-postgresql-server').to_s.empty?
+    if rpmempty == true
       nil
     else
       true
