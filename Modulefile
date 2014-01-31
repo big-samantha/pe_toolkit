@@ -1,6 +1,6 @@
 name    'zacharyalexstern-pe_toolkit'
-version '0.1.0'
-source 'UNKNOWN'
+version '0.0.1'
+source 'git@github.com:zacharyalexstern/pe_toolkit.git'
 author 'zacharyalexstern'
 license 'Apache License, Version 2.0'
 summary 'A set of tools to make monitoring and interacting with your PE deployment simpler.'
