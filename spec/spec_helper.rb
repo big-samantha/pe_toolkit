@@ -4,12 +4,18 @@ $LOAD_PATH.unshift File.join(dir, 'lib')
 require 'mocha'
 require 'puppet'
 require 'rspec'
+require 'facter'
 require 'puppetlabs_spec_helper/puppetlabs_spec_helper'
 require 'facter/pe_postgres_freespace.rb'
 require 'facter/pe_postgres_installed.rb'
 
 RSpec.configure do |config|
     config.mock_with :mocha
+    config.before :each do
+      Facter.clear
+      Facter.clear_messages
+      Facter.fact(:kernel).stubs(:value).returns('Linux')
+    end
 end
 
 # We need this because the RAL uses 'should' as a method.  This
@@ -17,5 +23,3 @@ end
 class Object
     alias :must :should
 end
-
-Facter.fact(:kernel).stubs(:value).returns('Linux')
