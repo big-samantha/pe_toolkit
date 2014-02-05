@@ -1,5 +1,5 @@
 # pe_postgres_freespace.rb
-# Returns the amount of free space available to Puppet Labs-vendored PostgreSQL server, in bytes.
+# Returns the amount of free space available to Puppet Labs-vendored PostgreSQL server, in kilobytes.
 
 Facter.add("pe_postgres_freespace") do
   confine :kernel => "Linux"
