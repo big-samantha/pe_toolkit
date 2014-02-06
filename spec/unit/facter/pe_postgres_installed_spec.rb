@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'facter'
 require 'facter/pe_postgres_installed.rb'
 
 describe 'pe_postgres_installed' do
