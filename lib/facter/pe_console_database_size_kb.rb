@@ -7,7 +7,7 @@ Facter.add("pe_console_database_size_kb") do
 
   setcode do
     size_command = "sudo -u pe-postgres /opt/puppet/bin/psql -c \"SELECT pg_database_size(\'console\')\""
-    db_size_in_bytes = Facter::Util::Resolution.exec(size_command).to_i
+    db_size_in_bytes = Facter::Util::Resolution.exec(size_command).split("\n")[2].strip.to_i
     db_size_in_kilobytes = db_size_in_bytes / 1024
     db_size_in_kilobytes
   end
