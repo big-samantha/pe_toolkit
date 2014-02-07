@@ -8,6 +8,8 @@ require 'facter'
 require 'puppetlabs_spec_helper/puppetlabs_spec_helper'
 require 'facter/pe_postgres_freespace.rb'
 require 'facter/pe_postgres_installed.rb'
+require 'facter/pe_console_database_size_kb.rb'
+require 'facter/has_working_sudo.rb'
 
 RSpec.configure do |config|
     config.mock_with :mocha
