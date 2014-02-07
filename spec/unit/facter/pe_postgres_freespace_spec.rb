@@ -7,8 +7,6 @@ describe 'pe_postgres_freespace' do
   dfsuccess = "Filesystem                   1K-blocks    Used Available Use% Mounted on\n/dev/mapper/VolGroup-lv_root   8712392 1725288   6544532  21% /"
   dffail = nil
 
-  Facter.fact(:pe_postgres_installed).stubs(:value).returns(true)
-
   it 'should return nil if df returns no such file or directory' do
     Facter.fact(:pe_postgres_installed).stubs(:value).returns(true)
     Facter::Util::Resolution.stubs(:exec).with(dfcommand).returns(dffail)
