@@ -4,12 +4,12 @@
 Facter.add("has_working_sudo") do
   confine :kernel => "Linux"
 
-  sudo_working = Kernel.system('sudo -v')
+  sudo_working = Facter::Util::Resolution.exec('sudo -v ; echo $?')
 
   setcode do
-    if sudo_working == true
+    if sudo_working == '0'
       true
-    elsif sudo_working == false
+    elsif sudo_working == nil
       nil
     end
   end

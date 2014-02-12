@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'facter'
 
 describe 'pe_postgres_freespace' do
 
