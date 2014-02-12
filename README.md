@@ -14,6 +14,7 @@ The purpose of this module is to provide some basic monitoring for the health of
   * vacuum_full_possible fact
   * Type and provider that you use on your pe-postgres server that "fails" when you do not have enough space to perform a vacuum:full.
   
+**NB**: The tests for things involving sudo currently fail because I can't figure out how to mock a `Facter::Util::Resolution.exec()` that involves sudo.
 
 #### License
 
